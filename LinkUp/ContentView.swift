@@ -1,9 +1,3 @@
-//
-//  ContentView.swift
-//  LinkUp
-//
-//  Created by Nguyen Khang on 4/11/25.
-//
 
 import SwiftUI
 
