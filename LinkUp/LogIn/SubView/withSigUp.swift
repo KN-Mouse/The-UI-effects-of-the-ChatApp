@@ -1,9 +1,4 @@
-//
-//  withSigUp.swift
-//  LinkUp
-//
-//  Created by Nguyen Khang on 6/11/25.
-//
+
 
 import SwiftUI
 
