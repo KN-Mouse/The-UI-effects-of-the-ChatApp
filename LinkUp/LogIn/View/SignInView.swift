@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct LogInView: View {
+struct SignInView: View {
     
     @State var email: String = ""
     @State var password: String = ""
@@ -53,39 +53,32 @@ struct LogInView: View {
                         .frame(maxWidth: .infinity)
                         .background(
                             RoundedRectangle(cornerRadius: 15)
+                                .fill(formisValid ? .blue : .blue.opacity(0.2))
                         )
+                        
                 }
+                .disabled(!formisValid)
                 .offset(x: isEffects ? 0 : -UIScreen.main.bounds.width)
                 //            Choose Signin with different
-                Text("- or continue with -")
-                    .font(.default)
-                    .foregroundColor(.gray)
-                    .padding(.top, 20)
                 
                 withSigUp()
+                    .padding()
                 
                 //            some infor add
                 Spacer()
                 HStack{
                     Text("Don't have an account?")
-                    NavigationLink(destination: EmptyView()){
+                    NavigationLink(destination: SignUpView()){
                         Text("Sign Up")
                     }
                 }
+                .padding(.bottom, 4)
                 
                
-                Text("By Signing in, you agree to our")
-                    .padding(.top, 8)
-                HStack{
-                    NavigationLink(destination: EmptyView()){
-                        Text("Terms of Service")
-                    }
-                    Text("and")
-                    NavigationLink(destination: EmptyView()){
-                        Text("Privacy Policy")
-                    }
-
-                }
+                Text(try! AttributedString(markdown: "By Sigining in, you agree to our [Terms of Service](https://example.com) and [Privacy Policy](https://example.com)"))
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity)
+             
             }
             .opacity(isEffects ? 1 : 0)
             .animation(.easeInOut(duration: 1.8), value: isEffects)
@@ -95,6 +88,14 @@ struct LogInView: View {
     }
 }
 
+//
+extension SignInView: AuthenticationForm {
+    var formisValid: Bool {
+        return !email.isEmpty
+        && !password.isEmpty
+    }
+}
+
 #Preview {
-    LogInView()
+    SignInView()
 }

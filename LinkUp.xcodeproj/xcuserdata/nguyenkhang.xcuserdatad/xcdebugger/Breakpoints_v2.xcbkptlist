@@ -41,11 +41,11 @@
                   endingLineNumber = "9">
                </Location>
                <Location
-                  uuid = "7C3B7F78-82CE-42D6-99DA-CCDFBB1AB1D2 - 532cc6c2ec83cce0"
+                  uuid = "7C3B7F78-82CE-42D6-99DA-CCDFBB1AB1D2 - 1a7eac23ba0e3570"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; LinkUp.LogInView in LinkUp.LinkUpApp.body.getter : some"
+                  symbolName = "closure #1 () -&gt; LinkUp.SignInView in LinkUp.LinkUpApp.body.getter : some"
                   moduleName = "LinkUp.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/KN%20Data/Learning%20Swift/Youtube/LinkUp/LinkUp/LinkUpApp.swift"
