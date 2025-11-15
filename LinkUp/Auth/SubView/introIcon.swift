@@ -1,9 +1,4 @@
-//
-//  introIcon.swift
-//  LinkUp
-//
-//  Created by Nguyen Khang on 10/11/25.
-//
+
 
 import SwiftUI
 

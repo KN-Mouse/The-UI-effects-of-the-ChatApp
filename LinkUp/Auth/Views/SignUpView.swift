@@ -107,14 +107,13 @@ struct SignUpView: View {
                 }
                 .padding(.horizontal, 8)
             }
-            .opacity(isEffects ? 1: 0)
-            .animation(.easeInOut(duration: 1.8), value: isEffects)
-            .onAppear{
-                isEffects = true
-
-            
+           
         }
-        }
+        .opacity(isEffects ? 1: 0)
+        .animation(.easeInOut(duration: 1.8), value: isEffects)
+        .onAppear{
+            isEffects = true
+    }
     }
 }
 

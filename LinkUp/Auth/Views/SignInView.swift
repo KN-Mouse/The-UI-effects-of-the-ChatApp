@@ -10,10 +10,11 @@ struct SignInView: View {
     @State var isEffects: Bool = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 //            Effects Image
                 iconWelcome()
+                    .padding()
                 //            Infor Well come
                 Text("Welcome back!")
                     .font(.largeTitle)
@@ -76,15 +77,17 @@ struct SignInView: View {
                 
                
                 Text(try! AttributedString(markdown: "By Sigining in, you agree to our [Terms of Service](https://example.com) and [Privacy Policy](https://example.com)"))
+                    .font(.footnote)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity)
              
             }
-            .opacity(isEffects ? 1 : 0)
-            .animation(.easeInOut(duration: 1.8), value: isEffects)
-            .onAppear{ isEffects = true }
-            .padding()
+           
         }
+        .opacity(isEffects ? 1 : 0)
+        .animation(.easeInOut(duration: 1.8), value: isEffects)
+        .onAppear{ isEffects = true }
+        .padding()
     }
 }
 

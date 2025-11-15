@@ -10,7 +10,7 @@ struct withSigUp: View {
         VStack {
             Text("-- With Sign Up --")
                 .foregroundColor(.gray)
-            HStack(spacing: 16){
+            HStack(spacing: 12){
                 ForEach(icons, id: \.self){ icon in
                     Button {
                         print("\(icon) tapped")
@@ -30,7 +30,6 @@ struct withSigUp: View {
                     .frame(maxWidth: .infinity)
                 }
             }
-            .padding(.horizontal, 30)
         }
     }
 }

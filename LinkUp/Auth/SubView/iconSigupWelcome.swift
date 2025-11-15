@@ -1,9 +1,4 @@
-//
-//  SwiftUIView.swift
-//  LinkUp
-//
-//  Created by Nguyen Khang on 8/11/25.
-//
+
 
 import SwiftUI
 

@@ -1,9 +1,3 @@
-//
-//  FormisValid.swift
-//  LinkUp
-//
-//  Created by Nguyen Khang on 9/11/25.
-//
 
 import Foundation
 
