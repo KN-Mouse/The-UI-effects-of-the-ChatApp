@@ -9,53 +9,46 @@ struct ProfileView: View {
         NavigationStack {
             ScrollView(showsIndicators: false) {
                         //                    Header
-                            ZStack{
-                                VStack {
-                                    HStack {
-                                        Button {
-                                            dismiss()
-                                        } label: {
-                                            Image(systemName: "chevron.backward.chevron.backward.dotted")
-                                                .foregroundColor(.white)
-                                        }
-                                        
-                                        Spacer()
-                                        Text("Profile")
-                                            .foregroundColor(.white)
-                                        Spacer()
-                                        NavigationLink(destination: EmptyView()){
-                                            Image(systemName: "gearshape.2.fill")
-                                                .foregroundColor(.white)
-                                        }
-                                        
-                                    }
-                                    .font(.title2)
-                                    .frame(maxWidth: .infinity)
-                                    
-                                    //                    Information currentUser
-                                    VStack {
-                                        Image(systemName: "person.circle")
-                                            .resizable()
-                                            .frame(width: 128, height: 128)
-                                        
-                                        Text("Name of currentuser")
-                                        Text("Number or email")
-                                        
-                                        
-                                    }
-                                }
-                                .padding(.top, 30)
-                               
-                            }.padding(.horizontal)
-                            .frame(height: 300)
-                            .frame(maxWidth: .infinity)
-                            .background(
-                                LinearGradient(colors: [Color.blue, Color.blue.opacity(0.5)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                            )
-                            .clipShape(
-                                headerbackground(bottomLeft: 25, bottomRight: 25)
-                            )
-                           
+                
+                subHeaderView(background: .blue.opacity(0.8), height: 290){
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Button {
+                                dismiss()
+                            } label: {
+                                Image(systemName: "chevron.backward.chevron.backward.dotted")
+                                    .foregroundColor(.white)
+                            }
+                            
+                            Spacer()
+                            Text("Profile")
+                                .foregroundColor(.white)
+                            Spacer()
+                            NavigationLink(destination: EmptyView()){
+                                Image(systemName: "gearshape.2.fill")
+                                    .foregroundColor(.white)
+                            }
+                            
+                        }
+                        .font(.title2)
+                        .frame(maxWidth: .infinity)
+                        
+                        //                    Information currentUser
+                        VStack {
+                            Image(systemName: "person.circle")
+                                .resizable()
+                                .frame(width: 128, height: 128)
+                            
+                            Text("Name of currentuser")
+                            Text("Number or email")
+                            
+                            
+                        }
+                    }
+                    .padding(.bottom, 12)
+                    .padding(.horizontal)
+                }
                 
                 //                        Bio or status
                 Text("Share something here (Bio or Status)")

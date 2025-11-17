@@ -1,11 +1,31 @@
-//
-//  headerBackground.swift
-//  LinkUp
-//
-//  Created by Nguyen Khang on 14/11/25.
-//
+
 
 import SwiftUI
+
+struct subHeaderView<Content: View>: View {
+    
+    let content: Content
+    let background: Color
+    let height: CGFloat
+    
+    init(background: Color = .white, height: CGFloat = 200, @ViewBuilder content: () -> Content) {
+        self.content = content()
+        self.background = background
+        self.height = height
+    }
+    
+    var body: some View {
+        VStack {
+            content
+        }
+        .frame(height: height)
+        .frame(maxWidth: .infinity)
+        .background(background)
+        .clipShape(
+            headerbackground(bottomLeft: 25, bottomRight: 25)
+        )
+    }
+}
 
 struct headerbackground: Shape {
     var bottomLeft: CGFloat = 0

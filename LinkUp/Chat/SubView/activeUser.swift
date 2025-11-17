@@ -1,9 +1,4 @@
-//
-//  activeUser.swift
-//  LinkUp
-//
-//  Created by Nguyen Khang on 12/11/25.
-//
+
 
 import SwiftUI
 
