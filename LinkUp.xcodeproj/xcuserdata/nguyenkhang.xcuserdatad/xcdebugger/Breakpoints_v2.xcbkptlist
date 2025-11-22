@@ -54,6 +54,20 @@
                   startingLineNumber = "9"
                   endingLineNumber = "9">
                </Location>
+               <Location
+                  uuid = "7C3B7F78-82CE-42D6-99DA-CCDFBB1AB1D2 - 7141381012cc3e3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; LinkUp.MainView in LinkUp.LinkUpApp.body.getter : some"
+                  moduleName = "LinkUp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/KN%20Data/Learning%20Swift/Youtube/LinkUp/LinkUp/LinkUpApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

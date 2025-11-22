@@ -14,16 +14,6 @@ struct ProfileView: View {
                     VStack {
                         Spacer()
                         HStack {
-                            Button {
-                                dismiss()
-                            } label: {
-                                Image(systemName: "chevron.backward.chevron.backward.dotted")
-                                    .foregroundColor(.white)
-                            }
-                            
-                            Spacer()
-                            Text("Profile")
-                                .foregroundColor(.white)
                             Spacer()
                             NavigationLink(destination: EmptyView()){
                                 Image(systemName: "gearshape.2.fill")
